@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Shower Presentation Engine</title>
     <meta charset="utf-8">
@@ -11,25 +12,248 @@
         }
     </style>
 </head>
+
 <body class="shower list">
 
     <header class="caption">
-        <h1>Shower Presentation Engine</h1>
-        <p>Yours Truly, Famous Inc.</p>
+        <h1>Introducing Collaborative Link Traversal Query Processing in the Context of Structured Decentralized
+            Environments</h1>
+        <p>Bryan-Elliott Tam</p>
     </header>
 
     <section class="slide">
-        <!-- Create your first slide -->
+        <ul>
+            <li>Many decentralized web initiatives</li>
+            <li>give (or re-give depending on perpective) control/sovereignty over data <a target="_blank"
+                    href="https://biblio.ugent.be/publication/8760525">[1]</a></li>
+            <li>
+                Give the choice to users
+                <ul>
+                    <li>Where They store data <a target="_blank"
+                            href="https://biblio.ugent.be/publication/8760525">[1]</a></li>
+                    <li>Who has access to it <a target="_blank"
+                            href="https://biblio.ugent.be/publication/8760525">[1]</a></li>
+                </ul>
+            </li>
+            <li>Is it enough?
+                <ul>
+                    <li>Should create and manage in communities should also be part of sovereignty over data</li>
+                </ul>
+            </li>
+        </ul>
     </section>
 
-    <footer class="badge">
-        <a href="https://github.com/shower/shower">Fork me on GitHub</a>
-    </footer>
+    <section class="slide">
+        <h1>Introducing Collaborative Link Traversal Query Processing (CLTQP) in the Context of Structured Decentralized
+            Environments</h1>
+
+        <p>Bryan-Elliott Tam</p>
+        <p>Universiteit Gent</p>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Agenda</h2>
+        <ol>
+            <li>Structured decentralized linked data environment and social applications</li>
+            <li>What we are found in the literature</li>
+            <li>Completeness of queries, execution time</li>
+            <li>Research questions and Hypotheses</li>
+            <li>Search domain division and collaborative caching</li>
+            <li>Limitation and What else can be done</li>
+            <li>Conclusion</li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2><b>Structured decentralized linked data environment</b> and social application</h2>
+        <p style="font-size: 0.80em;">
+            A structured decentralized linked data environment,
+            is a descentralized environnement , Where
+            we can consider <q>additional structural properties [along with the <a target="_blank"
+                    href="https://www.w3.org/DesignIssues/LinkedData.html">linked data principals</a>]
+                that allow us to make additional assumptions about data, documents, and their organization during query
+                execution.</q> <a target="_blank" href="https://arxiv.org/abs/2302.06933">[21]</a>
+        </p>
+        Exemple of properties
+        <ul>
+            <li><a target="_blank" href="https://www.w3.org/TR/ldp/">Linked Data Platform (LDP)</a></li>
+            <li><a target="_blank" href="https://solid.github.io/type-indexes/">Type Indexes</a></li>
+            <li><a target="_blank" href="https://www.w3.org/wiki/WebID">WebID</a></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Structured decentralized linked data environment and <b>social applications</b></h2>
+        <ul>
+            <li>Application driven by the interaction between users</li>
+            <li>Core functionalities
+                <ul>
+                    <li>Requesting information</li>
+                    <li>Discovering information (multiple considerations, for example privacy <a target="_blank"
+                            href="https://arxiv.org/abs/2302.06933">[21]</a>,
+                        representation <a target="_blank" href="https://doi.org/10.4324/9781315695624">[3]</a>,
+                        serendipity <a target="_blank" href="https://ceur-ws.org/Vol-3222/paper4.pdf">[6]</a>)</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <section class="slide">
+        <h2>What we are found in the literature</h2>
+        <ul>
+            <li>Link Traversal Query Processing (LTQP)</li>
+            <li>Collaborative SPARQL Querying</li>
+            <li>P2P caching in the context of the web</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Link Traversal Query Processing (LTQP)</h2>
+        <ul>
+            <li>Recursively looking up URIs to explore surronding information <a target="_blank"
+                    href="https://doi.org/10.1007/978-3-319-46523-4_19">[7]</a></li>
+            <li>Predefined lookup policies with no input from the client <a target="_blank"
+                    href="https://doi.org/10.1007/978-3-319-46523-4_19">[7]</a> <a target="_blank"
+                    href="https://doi.org/10.1145/2309996.2310005">[9]</a></li>
+            <li>Difficulties; open-endedness of the web and query planning <a target="_blank"
+                    href="http://dx.doi.org/10.1201/b16859-15">[8]</a></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Collaborative SPARQL Querying</h2>
+        <p>using multiple agents to facilitate querying by diminishing the computation load of the
+            execution or the discovery of data sources <a target="_blank"
+                href="https://doi.org/10.1007/978-3-030-59003-1_21">[10]</a></p>
+        <ul>
+            <li>Rotating data sources in a P2P network; Snob <a target="_blank"
+                    href="https://doi.org/10.3233/978-1-61499-894-5-55">[11]</a>
+                <ul>
+                    <li>partial view of the network; random and profile based</li>
+                    <li>Result share after the rotation</li>
+                    <li>Possible to enhace completness without visiting each data source</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Collaborative SPARQL Querying</h2>
+        <ul>
+            <li>Division of the search space in comunity: ColChain <a target="_blank"
+                    href="https://doi.org/10.1145/3442381.3450037">[12]</a>
+                <ul>
+                    <li>Creation of intentional comunity</li>
+                    <li>During querying analysis of its own data sources then to known comunities</li>
+                    <li>Colaboration in the division of the search space based on intentional social information</li>
+                </ul>
+            </li>
+            <li>Leveraging the social links between data sources <a target="_blank"
+                    href="https://doi.org/10.1109/ICDCS.2014.38">[13]</a> or the structure of the object modeled <a
+                    target="_blank" href="https://doi.org/10.1007/11836025_64">[14]</a></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>P2P caching in the context of the web</h2>
+        <ul>
+            <li>Mapping URLs in a distributed hash table (DHT): Squirrel <a target="_blank"
+                    href="https://doi.org/10.1145/571825.571861">[15]</a></li>
+            <li>Flower-CDN add a mecanism to consider the localicality of the node <a target="_blank"
+                    href="https://doi.org/10.1145/1516360.1516410"></a></li>
+            <li>Use an unstructure network with partial view; random and profile based (<q>behavioral locality</q>):
+                Behave <a target="_blank" href="https://doi.org/10.1007/978-3-662-43352-2_8">[17]</a></li>
+            <li>CyCLaDEs adapt the concept of Behave to SPARQL queries of RDF documents <a target="_blank"
+                    href="https://doi.org/10.1007/978-3-319-34129-3_28">[18]</a></li>
+        </ul>
+    </section>
+
+
+    <section class="slide">
+        <h2><b>Completeness of queries</b>, execution time</h2>
+        <ul style="font-size: 0.90em;">
+            <li>Define the domain as a subset of a graph containing all the triples available in a decentralized
+                structured environment</li>
+            <li>With more engines, more exploration of the domain
+                <ul>
+                    <li>Search of non overlapping section</li>
+                    <li>Sharing of results</li>
+                </ul>
+            </li>
+            <li>Structural biais of results
+                <ul>
+                    <li>Sensibility of initial condition</li>
+                    <li>Popularity biais</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Completeness of queries, <b>execution time</b></h2>
+        <ul style="font-size: 1.00em;">
+            
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2><b>Research questions</b> and Hypotheses</h2>
+        <ol style="font-size: 0.92em;">
+            <li>Can we achieve better query result completeness and lower global query execution time in the context of
+                LTQP by making multiple SPARQL query engines collaborate?</li>
+            <li>Does the CPU usages and the number of HTTP request for each engine diminish with the increase of engine
+                collaborating?</li>
+            <li>How can we prevent multiple query engines from repeating identical calculations over the same data
+                sources?</li>
+            <li>How can we reduce query execution time using P2P caching in the context of CLTQP?</li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2>Research questions and <b>Hypotheses</b></h2>
+        <ol style="font-size: 0.80em;">
+            <li>There is an inverse correlation between the number of engines collaborating and the execution time, and
+                a direct correlation with the number of data sources explored.</li>
+            <li>It is possible to partition the search space in the context of CLTQP, in a way that the query processing
+                time of overlapping data sources is less than the time to process distinct data sources.</li>
+            <li>It is possible to index a P2P cache and create a procedure for its usage in the context of CLTQP so that
+                its lookup time is faster than the execution of the query.</li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2>Search domain division and collaborative caching</h2>
+    </section>
+
+    <section class="slide">
+        <h2>Limitation and What else can be done</h2>
+        <ul>
+            <li>Mecanism for detecting similar queries; eg: Query containement <a target="_blank"
+                    href="https://doi.org/10.1007/978-3-031-01871-8">[27]</a></li>
+            <li>Fairness/"social contract" for sharing of computational power and cache</li>
+            <li>Measurement to know that it actually lower the individual cost of hosting a social application (it's
+                hard to compare because it has plusvalue that are hard to quantify)</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Conclusion</h2>
+        <ul>
+            <li>Building a Collaborative Link Traversal Query Processing in the Context of Structured Decentralized
+                Environments </li>
+            <li>
+                More complete queries by making more engines collaborate
+            </li>
+            <li>Faster queries by sharing cache information</li>
+            <li>Aim to make the creation of social applications more democratic</li>
+        </ul>
+    </section>
 
     <div class="progress"></div>
 
     <script src="node_modules/@shower/core/dist/shower.js"></script>
-    <!-- Copyright © 2023 Yours Truly, Famous Inc. -->
+    <!-- Copyright © 2023 Bryan-Elliott Tam -->
 
 </body>
+
 </html>
