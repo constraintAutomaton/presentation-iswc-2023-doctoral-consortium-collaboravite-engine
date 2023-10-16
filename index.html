@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <title>Shower Presentation Engine</title>
+    <title>Introducing Collaborative Link Traversal Query Processing in the Context of Structured Decentralized
+        Environments</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="node_modules/@shower/material/styles/styles.css">
@@ -22,9 +23,9 @@
     </header>
 
     <section class="slide">
-        <ul>
+        <ul style="font-size: 0.75em;">
             <li>Many decentralized web initiatives</li>
-            <li>give (or re-give depending on perpective) control/sovereignty over data <a target="_blank"
+            <li>give (or re-give depending on perspective) control/sovereignty over data <a target="_blank"
                     href="https://biblio.ugent.be/publication/8760525">[1]</a></li>
             <li>
                 Give the choice to users
@@ -37,7 +38,25 @@
             </li>
             <li>Is it enough?
                 <ul>
-                    <li>Should create and manage in communities should also be part of sovereignty over data</li>
+                    <li>Divergeance of interest <a target="_blank"
+                            href="http://dx.doi.org/10.1093/scipol/sct082">[4]</a></li>
+                    <li>Utilization of users as unpaid source of revue <a target="_blank"
+                            href="https://biblio.ugent.be/publication/8733276">[5]</a> even when data is anonymized <a
+                            target="_blank" href="about:blank">[2]</a> <a target="_blank"
+                            href="http://dx.doi.org/10.1093/scipol/sct082">[4]</a></li>
+                    <li>Contribution to centralization of wealth <a target="_blank"
+                            href="https://doi.org/10.4324/9781315695624">[3]</a> <a target="_blank"
+                            href="http://dx.doi.org/10.1093/scipol/sct082">[4]</a> <a target="_blank"
+                            href="https://biblio.ugent.be/publication/8733276">[5]</a> </li>
+                    <li>Increase of surveillance <a target="_blank" href="https://doi.org/10.4324/9781315695624">[3]</a>
+                        <a target="_blank" href="http://dx.doi.org/10.1093/scipol/sct082">[4]</a> <a target="_blank"
+                            href="https://biblio.ugent.be/publication/8733276">[5]</a></li>
+                </ul>
+            </li>
+            <li>We could consider giving the user a more democratic control of their social application
+                <ul>
+                    <li>A structural way to do it is by making them give the computational power for the functioning of
+                        the applications</li>
                 </ul>
             </li>
         </ul>
@@ -67,7 +86,7 @@
 
     <section class="slide">
         <h2><b>Structured decentralized linked data environment</b> and social application</h2>
-        <p style="font-size: 0.80em;">
+        <p style="font-size: 0.75em;">
             A structured decentralized linked data environment,
             is a descentralized environnement , Where
             we can consider <q>additional structural properties [along with the <a target="_blank"
@@ -75,7 +94,7 @@
                 that allow us to make additional assumptions about data, documents, and their organization during query
                 execution.</q> <a target="_blank" href="https://arxiv.org/abs/2302.06933">[21]</a>
         </p>
-        Exemple of properties
+        Exemple of element providing structure
         <ul>
             <li><a target="_blank" href="https://www.w3.org/TR/ldp/">Linked Data Platform (LDP)</a></li>
             <li><a target="_blank" href="https://solid.github.io/type-indexes/">Type Indexes</a></li>
@@ -91,6 +110,7 @@
                 <ul>
                     <li>Requesting information</li>
                     <li>Discovering information (multiple considerations, for example privacy <a target="_blank"
+                            href="https://doi.org/10.1145/2413176.2413215">[23]</a><a target="_blank"
                             href="https://arxiv.org/abs/2302.06933">[21]</a>,
                         representation <a target="_blank" href="https://doi.org/10.4324/9781315695624">[3]</a>,
                         serendipity <a target="_blank" href="https://ceur-ws.org/Vol-3222/paper4.pdf">[6]</a>)</li>
@@ -191,8 +211,17 @@
 
     <section class="slide">
         <h2>Completeness of queries, <b>execution time</b></h2>
-        <ul style="font-size: 1.00em;">
-            
+        Caching
+        <ul style="font-size: 0.90em;">
+            <li>Multiple similar, complementary or identical queries</li>
+            <li>In LTQP caching can improve query completness, but can increast query execution time <a target="_blank"
+                    href="https://www.researchgate.net/publication/228937303_How_Caching_Improves_Efficiency_and_Result_Completeness_for_Querying_Linked_Data">[22]</a>
+                <ul>
+                    <li>Has not been evaluated in structured environment</li>
+                </ul>
+            </li>
+            <li>In the literature does not consider LTQP particularities: long execution time, multiple sources,
+                difficulties to attain completeness</li>
         </ul>
     </section>
 
@@ -222,7 +251,66 @@
     </section>
 
     <section class="slide">
-        <h2>Search domain division and collaborative caching</h2>
+        <h2><b>Search domain division</b> and collaborative caching</h2>
+        <ol style="font-size: 0.70em;">
+            <li>Collect the seed URLs and divide them between the query engines
+                <ul>
+                    <li>Minimal comunication between the engines</li>
+                    <li>Do not consider the overlaps</li>
+                    <li>Potential loss of accuracy if the solutions are divided between multiple engines</li>
+                </ul>
+            </li>
+            <li>Set the reachability criteria of each engine so that they cannot or are less likely to have overlapping
+                search field
+                <ul>
+                    <li>The criteria has to be changed depending on the type of query</li>
+                </ul>
+            </li>
+            <li>Use a global link queue and solution map shared between all the query engines
+
+                <ul>
+                    <li>Necessitate more comunication between the engines</li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2><b>Search domain division</b> and collaborative caching</h2>
+        <ul>
+            <li>Result accuracy</li>
+            <li>Query execution time</li>
+            <li>The ratio of the execution time and the communication time between the engines</li>
+            <li>Ability to access isolated documents</li>
+            <li>Overlapping of the search space</li>
+            <li>Query result arrival times</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Search domain division and <b>collaborative caching</b></h2>
+        <ul style="font-size: 0.80em;">
+            <li>Caching of URLs contributing to the query</li>
+            <li>intermediary joint results</li>
+            <li>Two interpretation <ul>
+                    <li>checkpoint for longer execution</li>
+                    <li>Map of data source to explore</li>
+                </ul>
+            </li>
+        </ul>
+        <ol style="font-size: 0.80em;">
+            <li>Unstructured network where peers are clustered based on their behavior</li>
+            <li>Distributed Hash Table to find the cached element</li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2>Search domain division and <b>collaborative caching</b></h2>
+        <ul>
+            <li>Cache access time</li>
+            <li>Cache miss and cache hit rates</li>
+            <li>Execution time reduction</li>
+        </ul>
     </section>
 
     <section class="slide">
