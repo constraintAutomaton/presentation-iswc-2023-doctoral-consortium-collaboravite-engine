@@ -63,18 +63,20 @@
             of Structured Decentralized
             Environments</h1>
 
-        <p style="margin-bottom: 0.1vh;">Bryan-Elliott Tam</p>
+        <p style="margin-bottom: 0.1vh;">Bryan-Elliott Tam (Early stage PhD student)</p>
         <p>Universiteit Gent</p>
         </ul>
     </section>
 
     <section class="slide">
         <h2>Agenda</h2>
-        <ol>
-            <li>Structured decentralized linked data environment and social applications</li>
-            <li>What we are found in the literature</li>
-            <li>Problem of completeness of queries and execution time</li>
+        <ol style="font-size: 0.75em;">
+            <li><b>Structured decentralized linked data environment and social applications</b></li>
+            <li>Link Traversal Query Processing (LTQP)</li>
+            <li>Problem of completeness of LTQP in structured decentralized linked data environment</li>
+            <li>Problem of slow execution time of LTQP in structured decentralized linked data environment</li>
             <li>Research questions and hypotheses</li>
+            <li>Related work</li>
             <li>Planned Solution for Search for domain division and collaborative caching</li>
             <li>Limitation and what else can be done</li>
             <li>Conclusion</li>
@@ -83,56 +85,184 @@
 
     <section class="slide">
         <h2><b>Structured decentralized linked data environment</b> and social application</h2>
-        
-        <p style="font-size: 0.75em;">
-            A structured decentralized linked data environment
-            is a decentralized environment . Where
-            we can consider <q>additional structural properties [along with the <a target="_blank"
-                    href="https://www.w3.org/DesignIssues/LinkedData.html">linked data principals</a>]
-                that allow us to make additional assumptions about data, documents, and their organization during query
-                execution.</q> <a target="_blank" href="https://arxiv.org/abs/2302.06933">[21]</a>
-        </p>
-        Examples of specification providing structure
-        <ul>
-            <li><a target="_blank" href="https://www.w3.org/TR/ldp/">Linked Data Platform (LDP)</a></li>
-            <li><a target="_blank" href="https://solid.github.io/type-indexes/">Type Indexes</a></li>
-            <li><a target="_blank" href="https://www.w3.org/wiki/WebID">WebID</a></li>
-        </ul>
+        <div style="display: flex; height: 100%; width: 100%;">
+            <img src="images/structured_environment.svg" alt="Structured linked data environment" style="height: 70%;">
+            <div style="margin-left: 10vw;">
+                Examples of specification providing structure <a target="_blank"
+                    href="https://arxiv.org/abs/2302.06933">[21]</a>
+                <ul>
+                    <li><a target="_blank" href="https://www.w3.org/TR/ldp/">Linked Data Platform (LDP)</a></li>
+                    <li><a target="_blank" href="https://solid.github.io/type-indexes/">Type Indexes</a></li>
+                    <li><a target="_blank" href="https://www.w3.org/wiki/WebID">WebID</a></li>
+                </ul>
+            </div>
+        </div>
+
     </section>
 
     <section class="slide">
         <h2>Structured decentralized linked data environment and <b>social applications</b></h2>
-        <ul>
-            <li>Application driven by the interaction between users</li>
-            <li>Core functionalities
-                <ul>
-                    <li>Requesting information</li>
-                    <li>Discovering information</li>
-                </ul>
-            </li>
-        </ul>
+        <div style="display: flex; height: 100%; width: 100%;">
+            <img src="images/social_applications.svg" alt="social application schema" style="height: 70%;">
+            <ul style="margin-left: 5vw; font-size: 0.75em;">
+                <li>Application driven by the interaction between users</li>
+                <li>Core functionalities
+                    <ul>
+                        <li>Requesting information (We don't focus on access control)</li>
+                        <li>Discovering information (What we are actually doing)</li>
+                        <li>(Writing information, but we don't focus on that here)</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </section>
 
     <section class="slide">
-        <h2>What we are found in the literature</h2>
-        <ul>
-            <li>Link Traversal Query Processing (LTQP)</li>
-            <li>Collaborative SPARQL Querying</li>
-            <li>P2P caching in the context of the web</li>
-        </ul>
+        <h2>Agenda</h2>
+        <ol style="font-size: 0.75em;">
+            <li>Structured decentralized linked data environment and social applications</li>
+            <li><b>Link Traversal Query Processing (LTQP)</b></li>
+            <li>Problem of completeness of LTQP in structured decentralized linked data environment</li>
+            <li>Problem of slow execution time of LTQP in structured decentralized linked data environment</li>
+            <li>Research questions and hypotheses</li>
+            <li>Related work</li>
+            <li>Planned Solution for Search for domain division and collaborative caching</li>
+            <li>Limitation and what else can be done</li>
+            <li>Conclusion</li>
+        </ol>
     </section>
 
     <section class="slide">
         <h2>Link Traversal Query Processing (LTQP)</h2>
-        <ul>
-            <li>Recursively looking up URIs to explore surrounding information, starting from a set of URIs called seed
-                URIs <a target="_blank" href="https://doi.org/10.1007/978-3-319-46523-4_19">[7]</a></li>
-            <li>Predefined lookup policies with no input from the client <a target="_blank"
-                    href="https://doi.org/10.1007/978-3-319-46523-4_19">[7]</a> <a target="_blank"
-                    href="https://doi.org/10.1145/2309996.2310005">[9]</a></li>
-            <li>Difficulties; open-endedness of the web and query planning <a target="_blank"
-                    href="http://dx.doi.org/10.1201/b16859-15">[8]</a></li>
+        <div style="display: flex; height: 100%; width: 100%;">
+            <img src="images/ltqp.svg" alt="social application schema" style="height: 70%;">
+            <ul style="margin-left: 5vw; font-size: 0.75em;">
+                <li>Recursively looking up URIs to explore surrounding information, starting from a set of URIs called seed
+                    URIs <a target="_blank" href="https://doi.org/10.1007/978-3-319-46523-4_19">[7]</a></li>
+                <li>Predefined lookup policies with no input from the client <a target="_blank"
+                        href="https://doi.org/10.1007/978-3-319-46523-4_19">[7]</a> <a target="_blank"
+                        href="https://doi.org/10.1145/2309996.2310005">[9]</a></li>
+                <li>Difficulties; open-endedness of the web and query planning <a target="_blank"
+                        href="http://dx.doi.org/10.1201/b16859-15">[8]</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Agenda</h2>
+        <ol style="font-size: 0.75em;">
+            <li>Structured decentralized linked data environment and social applications</li>
+            <li>Link Traversal Query Processing (LTQP)</li>
+            <li><b>Problem of completeness of LTQP in structured decentralized linked data environment</b></li>
+            <li>Problem of slow execution time of LTQP in structured decentralized linked data environment</li>
+            <li>Research questions and hypotheses</li>
+            <li>Related work</li>
+            <li>Planned Solution for Search for domain division and collaborative caching</li>
+            <li>Limitation and what else can be done</li>
+            <li>Conclusion</li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2 style="font-size: 1.5em;">Problem of completeness of LTQP in structured decentralized linked data environment</h2>
+        <div style="display: flex; height: 100%; width: 100%;">
+            <img src="images/collaborative_engine.svg" alt="social application schema" style="height: 70%;">
+            <ul style="margin-left: 10vw; font-size: 0.70em;">
+                <li>With more engines, more exploration of the domain
+                    <ul>
+                        <li>Search of non overlapping section</li>
+                        <li>Sharing of results</li>
+                    </ul>
+                </li>
+                <li>Structural biais of results
+                    <ul>
+                        <li>Sensibility of initial condition</li>
+                        <li>Popularity biais</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+    </section>
+
+    <section class="slide">
+        <h2>Agenda</h2>
+        <ol style="font-size: 0.75em;">
+            <li>Structured decentralized linked data environment and social applications</li>
+            <li>Link Traversal Query Processing (LTQP)</li>
+            <li>Problem of completeness of LTQP in structured decentralized linked data environment</li>
+            <li><b>Problem of slow execution time of LTQP in structured decentralized linked data environment</b></li>
+            <li>Research questions and hypotheses</li>
+            <li>Related work</li>
+            <li>Planned Solution for Search for domain division and collaborative caching</li>
+            <li>Limitation and what else can be done</li>
+            <li>Conclusion</li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2 style="font-size: 1.5em;">Problem of slow execution time of LTQP in structured decentralized linked data environment</h2>
+        <p>We propose to use caching</p>
+        <ul style="font-size: 0.85em;">
+            <li>Multiple similar, complementary or identical queries</li>
+            <li>In LTQP caching:  improve query completeness, can increase query execution time <a target="_blank"
+                    href="https://www.researchgate.net/publication/228937303_How_Caching_Improves_Efficiency_and_Result_Completeness_for_Querying_Linked_Data">[22]</a>
+                <ul>
+                    <li>Has not been evaluated in structured environment</li>
+                </ul>
+            </li>
+            <li>In the literature does not consider LTQP particularities: long execution time, multiple sources,
+                difficulties to attain completeness</li>
         </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Agenda</h2>
+        <ol style="font-size: 0.75em;">
+            <li>Structured decentralized linked data environment and social applications</li>
+            <li>Link Traversal Query Processing (LTQP)</li>
+            <li>Problem of completeness of LTQP in structured decentralized linked data environment</li>
+            <li>Problem of slow execution time of LTQP in structured decentralized linked data environment</li>
+            <li><b>Research questions and hypotheses</b></li>
+            <li>Related work</li>
+            <li>Planned Solution for Search for domain division and collaborative caching</li>
+            <li>Limitation and what else can be done</li>
+            <li>Conclusion</li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2>Research questions</h2>
+        <ol style="font-size: 0.92em;">
+            <li>Can we achieve better query result completeness and lower global query execution time?</li>
+            <li>Does the CPU usages and the number of HTTP request for each engine diminish?</li>
+            <li>How can we prevent subdomain overlapping?</li>
+            <li>How can we reduce query execution time using P2P caching?</li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2>Hypotheses</h2>
+        <ol style="font-size: 0.80em;">
+            <li>Increasing the number of engine dimunish query execution time and increase the number of data sources explored.</li>
+            <li>It is possible to create minimally overlapping subdomains without increasing query execution time.</li>
+            <li>It is possible to create a P2P cache that decreases query execution time.</li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2>Agenda</h2>
+        <ol style="font-size: 0.75em;">
+            <li>Structured decentralized linked data environment and social applications</li>
+            <li>Link Traversal Query Processing (LTQP)</li>
+            <li>Problem of completeness of LTQP in structured decentralized linked data environment</li>
+            <li>Problem of slow execution time of LTQP in structured decentralized linked data environment</li>
+            <li>Research questions and hypotheses</li>
+            <li><b>Related work</b></li>
+            <li>Planned Solution for Search for domain division and collaborative caching</li>
+            <li>Limitation and what else can be done</li>
+            <li>Conclusion</li>
+        </ol>
     </section>
 
     <section class="slide">
@@ -152,6 +282,7 @@
         </ul>
     </section>
 
+
     <section class="slide">
         <h2>Collaborative SPARQL Querying</h2>
         <ul>
@@ -164,8 +295,8 @@
                 </ul>
             </li>
             <li>Leveraging the social links between data sources <a target="_blank"
-                    href="https://doi.org/10.1109/ICDCS.2014.38">[13]</a> <a
-                    target="_blank" href="https://doi.org/10.1007/11836025_64">[14]</a></li>
+                    href="https://doi.org/10.1109/ICDCS.2014.38">[13]</a> <a target="_blank"
+                    href="https://doi.org/10.1007/11836025_64">[14]</a></li>
         </ul>
     </section>
 
@@ -176,85 +307,34 @@
                     href="https://doi.org/10.1145/571825.571861">[15]</a></li>
             <li>Flower-CDN add a mechanism to consider the localicality of the node <a target="_blank"
                     href="https://doi.org/10.1145/1516360.1516410"></a></li>
-            <li>Using an unstructured network with partial views; random and profiles based (<q>behavioral locality</q>):
+            <li>Using an unstructured network with partial views; random and profiles based (<q>behavioral
+                    locality</q>):
                 Behave <a target="_blank" href="https://doi.org/10.1007/978-3-662-43352-2_8">[17]</a></li>
             <li>CyCLaDEs adapt the concept of Behave to SPARQL queries of RDF documents <a target="_blank"
                     href="https://doi.org/10.1007/978-3-319-34129-3_28">[18]</a></li>
         </ul>
     </section>
 
-    <section class="slide">
-        <h1>What is the scientific problem we want to solve?</h1>
-    </section>
 
     <section class="slide">
-        <h2><b>Problem of completeness of queries</b> and execution time</h2>
-        <ul style="font-size: 0.90em;">
-            <li>Define the domain as a subset of a graph containing all the triples available in a decentralized
-                structured environment</li>
-            <li>With more engines, more exploration of the domain
-                <ul>
-                    <li>Search of non overlapping section</li>
-                    <li>Sharing of results</li>
-                </ul>
-            </li>
-            <li>Structural biais of results
-                <ul>
-                    <li>Sensibility of initial condition</li>
-                    <li>Popularity biais</li>
-                </ul>
-            </li>
-        </ul>
-    </section>
-
-    <section class="slide">
-        <h2>Problem of completeness of queries and <b>execution time</b></h2>
-        <p>We propose to use caching</p>
-        <ul style="font-size: 0.85em;">
-            <li>Multiple similar, complementary or identical queries</li>
-            <li>In LTQP caching can improve query completness, but can increast query execution time <a target="_blank"
-                    href="https://www.researchgate.net/publication/228937303_How_Caching_Improves_Efficiency_and_Result_Completeness_for_Querying_Linked_Data">[22]</a>
-                <ul>
-                    <li>Has not been evaluated in structured environment</li>
-                </ul>
-            </li>
-            <li>In the literature does not consider LTQP particularities: long execution time, multiple sources,
-                difficulties to attain completeness</li>
-        </ul>
-    </section>
-
-    <section class="slide">
-        <h2><b>Research questions</b> and Hypotheses</h2>
-        <ol style="font-size: 0.92em;">
-            <li>Can we achieve better query result completeness and lower global query execution time in the context of
-                LTQP by making multiple SPARQL query engines collaborate?</li>
-            <li>Does the CPU usages and the number of HTTP request for each engine diminish with the increase of engine
-                collaborating?</li>
-            <li>How can we prevent multiple query engines from repeating identical calculations over the same data
-                sources?</li>
-            <li>How can we reduce query execution time using P2P caching in the context of CLTQP?</li>
+        <h2>Agenda</h2>
+        <ol style="font-size: 0.75em;">
+            <li>Structured decentralized linked data environment and social applications</li>
+            <li>Link Traversal Query Processing (LTQP)</li>
+            <li>Problem of completeness of LTQP in structured decentralized linked data environment</li>
+            <li>Problem of slow execution time of LTQP in structured decentralized linked data environment</li>
+            <li>Research questions and hypotheses</li>
+            <li>Related work</li>
+            <li><b>Planned Solution for Search for domain division and collaborative caching</b></li>
+            <li>Limitation and what else can be done</li>
+            <li>Conclusion</li>
         </ol>
     </section>
 
-    <section class="slide">
-        <h2>Research questions and <b>Hypotheses</b></h2>
-        <ol style="font-size: 0.80em;">
-            <li>There is an inverse correlation between the number of engines collaborating and the execution time, and
-                a direct correlation with the number of data sources explored.</li>
-            <li>It is possible to partition the search space in the context of CLTQP, in a way that the query processing
-                time of overlapping data sources is less than the time to process distinct data sources.</li>
-            <li>It is possible to index a P2P cache and create a procedure for its usage in the context of CLTQP so that
-                its lookup time is faster than the execution of the query.</li>
-        </ol>
-    </section>
 
     <section class="slide">
-        <h1>What are our potential solutions?</h1>
-    </section>
-
-    <section class="slide">
-        <h2><b>Search domain division</b> and collaborative caching</h2>
-        <ol style="font-size: 0.70em;">
+        <h2>Search domain division</h2>
+        <ol style="font-size: 0.75em;">
             <li>Collect the seed URLs and divide them between the query engines
                 <ul>
                     <li>Minimal comunication between the engines</li>
@@ -338,43 +418,6 @@
             <li>Faster queries by sharing cache information</li>
             <li>Aim to make the creation of social applications more democratic</li>
         </ul>
-    </section>
-
-    <section class="slide">
-        <h2>References</h2>
-        <ol>
-            <li>Verstraete, M., Verbrugge, S., Colle, D.: Solid: Enabler of decentralized, digital platforms ecosystems.
-                In: ITS (2022).</li>
-            <li>Terranova, T.: Free Labor: Producing Culture for the Digital Economy. Social Text. (2000).</li>
-            <li>Curran, J.: The internet of dreams Reinterpreting the internet. In: Misunderstanding the Internet
-                (2016).</li>
-            <li>Sevignani, S.: The commodification of privacy on the Internet. Science and Public Policy. (2013).</li>
-        </ol>
-    </section>
-
-    <section class="slide">
-        <h2>References</h2>
-        <ol start="5">
-            <li>Mechant, P., De Wolf, R., Van Compernolle, M., Joris, G., Evens, T., De Marez, L.: Saving the web by
-                decentralizing data networks? A socio-technical reflection on the promise of decentralization and
-                personal data stores. In: 2021 14th CMI International Conference (2021).</li>
-            <li>Smets, A., Michiels, L., Bogers, T., Björneborn, L.: Serendipity in Recommender Systems Beyond the
-                Algorithm: a Feature Repository and Experimental Design. In: IntRS@RecSys (2022).</li>
-
-        </ol>
-    </section>
-
-
-
-    <section class="slide">
-        <h2>References</h2>
-        <ol start="7">
-            <li>Hartig, O., Özsu, M.T.: Walking Without a Map: Ranking-Based Traversal for Querying Linked Data. In:
-                ISWC</li>
-            <li>Hartig, O.: Linked Data Query Processing Based on Link Traversal. In: Linked Data Management</li>
-            <li>Hartig, O., Freytag, J.-C.: Foundations of Traversal Based Query Execution over Linked Data. In:
-                Conference on Hypertext and Social Media</li>
-        </ol>
     </section>
 
     <div class="progress"></div>
