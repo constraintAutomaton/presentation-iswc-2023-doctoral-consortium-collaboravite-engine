@@ -137,7 +137,8 @@
         <div style="display: flex; height: 100%; width: 100%;">
             <img src="images/ltqp.svg" alt="social application schema" style="height: 70%;">
             <ul style="margin-left: 5vw; font-size: 0.75em;">
-                <li>Recursively looking up URIs to explore surrounding information, starting from a set of URIs called seed
+                <li>Recursively looking up URIs to explore surrounding information, starting from a set of URIs called
+                    seed
                     URIs <a target="_blank" href="https://doi.org/10.1007/978-3-319-46523-4_19">[7]</a></li>
                 <li>Predefined lookup policies with no input from the client <a target="_blank"
                         href="https://doi.org/10.1007/978-3-319-46523-4_19">[7]</a> <a target="_blank"
@@ -164,7 +165,8 @@
     </section>
 
     <section class="slide">
-        <h2 style="font-size: 1.5em;">Problem of completeness of LTQP in structured decentralized linked data environment</h2>
+        <h2 style="font-size: 1.5em;">Problem of completeness of LTQP in structured decentralized linked data
+            environment</h2>
         <div style="display: flex; height: 100%; width: 100%;">
             <img src="images/collaborative_engine.svg" alt="social application schema" style="height: 70%;">
             <ul style="margin-left: 10vw; font-size: 0.70em;">
@@ -182,7 +184,7 @@
                 </li>
             </ul>
         </div>
-        
+
     </section>
 
     <section class="slide">
@@ -201,11 +203,12 @@
     </section>
 
     <section class="slide">
-        <h2 style="font-size: 1.5em;">Problem of slow execution time of LTQP in structured decentralized linked data environment</h2>
+        <h2 style="font-size: 1.5em;">Problem of slow execution time of LTQP in structured decentralized linked data
+            environment</h2>
         <p>We propose to use caching</p>
         <ul style="font-size: 0.85em;">
             <li>Multiple similar, complementary or identical queries</li>
-            <li>In LTQP caching:  improve query completeness, can increase query execution time <a target="_blank"
+            <li>In LTQP caching: improve query completeness, can increase query execution time <a target="_blank"
                     href="https://www.researchgate.net/publication/228937303_How_Caching_Improves_Efficiency_and_Result_Completeness_for_Querying_Linked_Data">[22]</a>
                 <ul>
                     <li>Has not been evaluated in structured environment</li>
@@ -244,7 +247,8 @@
     <section class="slide">
         <h2>Hypotheses</h2>
         <ol style="font-size: 0.80em;">
-            <li>Increasing the number of engine dimunish query execution time and increase the number of data sources explored.</li>
+            <li>Increasing the number of engine dimunish query execution time and increase the number of data sources
+                explored.</li>
             <li>It is possible to create minimally overlapping subdomains without increasing query execution time.</li>
             <li>It is possible to create a P2P cache that decreases query execution time.</li>
         </ol>
@@ -331,30 +335,74 @@
         </ol>
     </section>
 
-
     <section class="slide">
         <h2>Search domain division</h2>
-        <ol style="font-size: 0.75em;">
-            <li>Collect the seed URLs and divide them between the query engines
+        <ol>
+            <li>Divide seed URLs between query engines</li>
+            <li>Adapt reachability criteria for each engine to the domain and query</li>
+            <li>Use a global link queue and solution map</li>
+        </ol>
+    </section>
+
+    <section class="slide" style="display: flex; flex-direction: column; justify-items: center; align-items: center;">
+        <h2>Divide seed URLs between query engines</h2>
+        <img src="images/divide_link_queue.svg" alt="divison of link queue" style="height: 35%;">
+        <div style="display: grid; grid-template-columns: repeat(2, 50%); font-size: 0.70em;">
+            <div>
+                <b>Advantage</b>
                 <ul>
                     <li>Minimal comunication between the engines</li>
+                </ul>
+            </div>
+
+            <div>
+                <b>disadvantage</b>
+                <ul>
                     <li>Do not consider the overlaps</li>
                     <li>Potential loss of accuracy if the solutions are divided between multiple engines</li>
                 </ul>
-            </li>
-            <li>Set the reachability criteria of each engine so that they cannot or are less likely to have overlapping
-                search field
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Adapt reachability criteria for each engine to the domain and query</h2>
+
+        <div style="display: grid; grid-template-columns: repeat(2, 50%); font-size: 0.70em;">
+            <div>
+                <b>Advantage</b>
+                <ul>
+                    <li>Minimal comunication between the engines</li>
+                </ul>
+            </div>
+
+            <div>
+                <b>disadvantage</b>
                 <ul>
                     <li>The criteria has to be changed depending on the type of query</li>
+                    <li>Might not be suited for every query and dataset</li>
                 </ul>
-            </li>
-            <li>Use a global link queue and solution map shared between all the query engines
+            </div>
+        </div>
+    </section>
 
+    <section class="slide">
+        <h2>Use a global link queue and solution map</h2>
+        <div style="display: grid; grid-template-columns: repeat(2, 50%); font-size: 0.70em;">
+            <div>
+                <b>Advantage</b>
+                <ul>
+                    <li>More reliable with no special consideration or manipulation to get all the results</li>
+                </ul>
+            </div>
+
+            <div>
+                <b>disadvantage</b>
                 <ul>
                     <li>Necessitate more comunication between the engines</li>
                 </ul>
-            </li>
-        </ol>
+            </div>
+        </div>
     </section>
 
     <section class="slide">
