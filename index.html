@@ -11,6 +11,10 @@
         .shower {
             --slide-ratio: calc(16 / 9);
         }
+
+        .reference {
+            font-size: 0.5em;
+        }
     </style>
 </head>
 
@@ -23,7 +27,18 @@
     </header>
 
     <section class="slide">
-        <ul style="font-size: 0.75em;">
+        <h1 style="margin-bottom: 7vh;">Introducing Collaborative Link Traversal Query Processing (CLTQP) in the Context
+            of Structured Decentralized
+            Environments</h1>
+
+        <p style="margin-bottom: 0.1vh;">Bryan-Elliott Tam (Early stage PhD student)</p>
+        <p>Universiteit Gent</p>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Motivation</h2>
+        <ul style="font-size: 1em;">
             <li>Many decentralized web initiatives</li>
             <li>Give (or re-give depending on perspective) control/sovereignty over data <a target="_blank"
                     href="https://biblio.ugent.be/publication/8760525">[1]</a>
@@ -34,37 +49,41 @@
                             href="https://biblio.ugent.be/publication/8760525">[1]</a></li>
                 </ul>
             </li>
-
-            <li>Is it enough?
-                <ul>
-                    <li>Divergeance of interest or representation (topics, design choices, languages) <a target="_blank"
-                            href="http://dx.doi.org/10.1093/scipol/sct082">[4]</a></li>
-                    <li>Utilization of users as unpaid source of revue <a target="_blank"
-                            href="https://biblio.ugent.be/publication/8733276">[5]</a> even when data is anonymized <a
-                            target="_blank" href="about:blank">[2]</a> <a target="_blank"
-                            href="http://dx.doi.org/10.1093/scipol/sct082">[4]</a></li>
-                    <li>Contribution to centralization of wealth <a target="_blank"
-                            href="https://doi.org/10.4324/9781315695624">[3]</a> <a target="_blank"
-                            href="http://dx.doi.org/10.1093/scipol/sct082">[4]</a> <a target="_blank"
-                            href="https://biblio.ugent.be/publication/8733276">[5]</a> </li>
-                </ul>
-            </li>
-            <li>We could consider giving the user a more democratic control of their social application
-                <ul>
-                    <li>A structural way to do it is by making them give the computational power for the functioning of
-                        the applications</li>
-                </ul>
-            </li>
         </ul>
+        <p class="reference"> [1] Solid : enabler of decentralized, digital platforms ecosystems (Verstraete)</p>
     </section>
 
     <section class="slide">
-        <h1 style="margin-bottom: 7vh;">Introducing Collaborative Link Traversal Query Processing (CLTQP) in the Context
-            of Structured Decentralized
-            Environments</h1>
+        <h2>Is it enough?</h2>
+        <ul>
+            <li>Divergence of interest or representation (Centralization of news even with social media, addictive
+                design, sur-representation of certain languages) <a target="_blank"
+                    href="http://dx.doi.org/10.1093/scipol/sct082">[1]</a></li>
+            <li>Utilization of users as unpaid sources of revue <a target="_blank"
+                    href="https://biblio.ugent.be/publication/8733276">[2]</a> even when data is anonymized <a
+                    target="_blank" href="about:blank">[2]</a> <a target="_blank"
+                    href="http://dx.doi.org/10.1093/scipol/sct082">[1]</a></li>
+            <li>Contribution to centralization of wealth <a target="_blank"
+                    href="https://doi.org/10.4324/9781315695624">[3]</a> <a target="_blank"
+                    href="http://dx.doi.org/10.1093/scipol/sct082">[1]</a> <a target="_blank"
+                    href="https://biblio.ugent.be/publication/8733276">[2]</a> </li>
+        </ul>
+        <p class="reference">
+            [1] The commodification of privacy on the Internet (Sevignani) <br>
+            [2] Saving the web by decentralizing data networks? A socio-technical reflection on the promise of
+            decentralization and personal data stores (Mechant) <br>
+            [3] Misunderstanding the Internet (Curran)
+        </p>
+    </section>
 
-        <p style="margin-bottom: 0.1vh;">Bryan-Elliott Tam (Early stage PhD student)</p>
-        <p>Universiteit Gent</p>
+    <section class="slide">
+        <h2>A more user-controlled way to power applications?</h2>
+        <ul>
+            <li>A structural approach</li>
+            <li>Users provide themselves with the computational power</li>
+            <li>The more user the lower the cost</li>
+            <li>More control over the design choices</li>
+            <li>Interoperability between applications</li>
         </ul>
     </section>
 
@@ -84,24 +103,25 @@
     </section>
 
     <section class="slide">
-        <h2><b>Structured decentralized linked data environment</b> and social application</h2>
+        <h2>Structured decentralized linked data environment</h2>
         <div style="display: flex; height: 100%; width: 100%;">
             <img src="images/structured_environment.svg" alt="Structured linked data environment" style="height: 70%;">
-            <div style="margin-left: 10vw;">
+            <div style="margin-left: 10vw; font-size: 0.90em;">
                 Examples of specification providing structure <a target="_blank"
-                    href="https://arxiv.org/abs/2302.06933">[21]</a>
+                    href="https://arxiv.org/abs/2302.06933">[1]</a>
                 <ul>
                     <li><a target="_blank" href="https://www.w3.org/TR/ldp/">Linked Data Platform (LDP)</a></li>
                     <li><a target="_blank" href="https://solid.github.io/type-indexes/">Type Indexes</a></li>
                     <li><a target="_blank" href="https://www.w3.org/wiki/WebID">WebID</a></li>
                 </ul>
+                <p class="reference"> [1] Evaluation of Link Traversal Query Execution over Decentralized Environments
+                    with Structural Assumptions (Taelman)</p>
             </div>
         </div>
-
     </section>
 
     <section class="slide">
-        <h2>Structured decentralized linked data environment and <b>social applications</b></h2>
+        <h2>social applications</h2>
         <div style="display: flex; height: 100%; width: 100%;">
             <img src="images/social_applications.svg" alt="social application schema" style="height: 70%;">
             <ul style="margin-left: 5vw; font-size: 0.75em;">
@@ -109,7 +129,7 @@
                 <li>Core functionalities
                     <ul>
                         <li>Requesting information (We don't focus on access control)</li>
-                        <li>Discovering information (What we are actually doing)</li>
+                        <li>Discovering information (What we are doing)</li>
                         <li>(Writing information, but we don't focus on that here)</li>
                     </ul>
                 </li>
@@ -136,16 +156,23 @@
         <h2>Link Traversal Query Processing (LTQP)</h2>
         <div style="display: flex; height: 100%; width: 100%;">
             <img src="images/ltqp.svg" alt="social application schema" style="height: 70%;">
-            <ul style="margin-left: 5vw; font-size: 0.75em;">
+            <ul style="margin-left: 5vw; font-size: 0.72em;">
                 <li>Recursively looking up URIs to explore surrounding information, starting from a set of URIs called
                     seed
-                    URIs <a target="_blank" href="https://doi.org/10.1007/978-3-319-46523-4_19">[7]</a></li>
+                    URIs <a target="_blank" href="https://doi.org/10.1007/978-3-319-46523-4_19">[1]</a></li>
                 <li>Predefined lookup policies with no input from the client <a target="_blank"
-                        href="https://doi.org/10.1007/978-3-319-46523-4_19">[7]</a> <a target="_blank"
-                        href="https://doi.org/10.1145/2309996.2310005">[9]</a></li>
+                        href="https://doi.org/10.1007/978-3-319-46523-4_19">[1]</a> <a target="_blank"
+                        href="https://doi.org/10.1145/2309996.2310005">[2]</a></li>
                 <li>Difficulties; open-endedness of the web and query planning <a target="_blank"
-                        href="http://dx.doi.org/10.1201/b16859-15">[8]</a></li>
+                        href="https://www.researchgate.net/publication/300455203_Linked_Data_Query_Processing_Based_on_Link_Traversal">[3]</a>
+                </li>
+                <p class="reference">
+                    [1] Walking Without a Map: Ranking-Based Traversal for Querying Linked Data (Hartig) <br>
+                    [2] Foundations of traversal based query execution over linked data (Hartig) <br>
+                    [3] Linked Data Query Processing Based on Link Traversal (Hartig)
+                </p>
             </ul>
+
         </div>
     </section>
 
@@ -172,14 +199,14 @@
             <ul style="margin-left: 10vw; font-size: 0.70em;">
                 <li>With more engines, more exploration of the domain
                     <ul>
-                        <li>Search of non overlapping section</li>
+                        <li>Search of non-overlapping section</li>
                         <li>Sharing of results</li>
                     </ul>
                 </li>
-                <li>Structural biais of results
+                <li>Structural biase of results
                     <ul>
                         <li>Sensibility of initial condition</li>
-                        <li>Popularity biais</li>
+                        <li>Popularity biase</li>
                     </ul>
                 </li>
             </ul>
@@ -207,16 +234,19 @@
             environment</h2>
         <p>We propose to use caching</p>
         <ul style="font-size: 0.85em;">
-            <li>Multiple similar, complementary or identical queries</li>
-            <li>In LTQP caching: improve query completeness, can increase query execution time <a target="_blank"
-                    href="https://www.researchgate.net/publication/228937303_How_Caching_Improves_Efficiency_and_Result_Completeness_for_Querying_Linked_Data">[22]</a>
+            <li>Multiple similar, complementary, or identical queries</li>
+            <li>In LTQP caching: improves query completeness, can increase query execution time <a target="_blank"
+                    href="https://www.researchgate.net/publication/228937303_How_Caching_Improves_Efficiency_and_Result_Completeness_for_Querying_Linked_Data">[1]</a>
                 <ul>
-                    <li>Has not been evaluated in structured environment</li>
+                    <li>Has not been evaluated in structured environments</li>
                 </ul>
             </li>
             <li>In the literature does not consider LTQP particularities: long execution time, multiple sources,
-                difficulties to attain completeness</li>
+                difficulties in attaining completeness</li>
         </ul>
+        <p class="reference">
+           [1] How Caching Improves Efficiency and Result Completeness for Querying Linked Data (Hartig)
+        </p>
     </section>
 
     <section class="slide">
@@ -238,7 +268,7 @@
         <h2>Research questions</h2>
         <ol style="font-size: 0.92em;">
             <li>Can we achieve better query result completeness and lower global query execution time?</li>
-            <li>Does the CPU usages and the number of HTTP request for each engine diminish?</li>
+            <li>Does the CPU usage and the number of HTTP requests for each engine diminish?</li>
             <li>How can we prevent subdomain overlapping?</li>
             <li>How can we reduce query execution time using P2P caching?</li>
         </ol>
@@ -247,7 +277,7 @@
     <section class="slide">
         <h2>Hypotheses</h2>
         <ol style="font-size: 0.80em;">
-            <li>Increasing the number of engine dimunish query execution time and increase the number of data sources
+            <li>Increasing the number of engine diminishes query execution time and increase the number of data sources
                 explored.</li>
             <li>It is possible to create minimally overlapping subdomains without increasing query execution time.</li>
             <li>It is possible to create a P2P cache that decreases query execution time.</li>
@@ -273,50 +303,65 @@
         <h2>Collaborative SPARQL Querying</h2>
         <p>Using multiple agents to facilitate querying by diminishing the computation load of the
             execution or the discovery of data sources. <a target="_blank"
-                href="https://doi.org/10.1007/978-3-030-59003-1_21">[10]</a></p>
+                href="https://doi.org/10.1007/978-3-030-59003-1_21">[1]</a></p>
         <ul>
             <li>Rotating data sources in a P2P network; Snob <a target="_blank"
-                    href="https://doi.org/10.3233/978-1-61499-894-5-55">[11]</a>
+                    href="https://doi.org/10.3233/978-1-61499-894-5-55">[2]</a>
                 <ul>
-                    <li>Partial view of the network; random and profile based</li>
-                    <li>Results share after the rotation</li>
-                    <li>Possible to enhace completness without visiting each data sources</li>
+                    <li>Partial view of the network; random and profile-based</li>
+                    <li>Results shared after the rotation</li>
+                    <li>Possible to enhance completeness without visiting each data source</li>
                 </ul>
             </li>
         </ul>
+        <p class="reference">
+            [1] Collaborative SPARQL Query Processing for Decentralized Semantic Data (Grall) <br>
+            [2] SPARQL Query Execution in Networks of Web Browsers (Grall)
+        </p>
     </section>
 
 
     <section class="slide">
         <h2>Collaborative SPARQL Querying</h2>
-        <ul>
-            <li>Division of the search space in comunity: ColChain <a target="_blank"
-                    href="https://doi.org/10.1145/3442381.3450037">[12]</a>
+        <ul style="font-size: 0.9em;">
+            <li>Division of the search space in communities: ColChain <a target="_blank"
+                    href="https://doi.org/10.1145/3442381.3450037">[1]</a>
                 <ul>
-                    <li>Creation of deliberate comunities</li>
-                    <li>Querying own data source then the ones from known communities.</li>
-                    <li>Collaboration in the division of the search space based in socially close information</li>
+                    <li>Creation of deliberate communities</li>
+                    <li>Querying own data source than the ones from known communities.</li>
+                    <li>Collaboration in the division of the search space based on socially close information</li>
                 </ul>
             </li>
             <li>Leveraging the social links between data sources <a target="_blank"
-                    href="https://doi.org/10.1109/ICDCS.2014.38">[13]</a> <a target="_blank"
-                    href="https://doi.org/10.1007/11836025_64">[14]</a></li>
+                    href="https://doi.org/10.1109/ICDCS.2014.38">[2]</a> <a target="_blank"
+                    href="https://doi.org/10.1007/11836025_64">[3]</a></li>
         </ul>
+        <p class="reference">
+            [1] ColChain: Collaborative Linked Data Networks (Aebeloe) <br>
+            [2] An Interest-Based Per-Community P2P Hierarchical Structure for Short Video Sharing in the YouTube Social Network (Shen) <br>
+            [3] SemreX: A Semantic Peer-to-Peer System for Literature Documents Retrieval (Jin)
+        </p>
     </section>
 
     <section class="slide">
         <h2>P2P caching in the context of the web</h2>
-        <ul>
+        <ul style="font-size: 0.9em;">
             <li>Mapping URLs in a distributed hash table (DHT): Squirrel <a target="_blank"
-                    href="https://doi.org/10.1145/571825.571861">[15]</a></li>
-            <li>Flower-CDN add a mechanism to consider the localicality of the node <a target="_blank"
-                    href="https://doi.org/10.1145/1516360.1516410"></a></li>
+                    href="https://doi.org/10.1145/571825.571861">[1]</a></li>
+            <li>Flower-CDN adds a mechanism to consider the localicality of the node <a target="_blank"
+                    href="https://doi.org/10.1145/1516360.1516410">[2]</a></li>
             <li>Using an unstructured network with partial views; random and profiles based (<q>behavioral
                     locality</q>):
-                Behave <a target="_blank" href="https://doi.org/10.1007/978-3-662-43352-2_8">[17]</a></li>
+                Behave <a target="_blank" href="https://doi.org/10.1007/978-3-662-43352-2_8">[3]</a></li>
             <li>CyCLaDEs adapt the concept of Behave to SPARQL queries of RDF documents <a target="_blank"
-                    href="https://doi.org/10.1007/978-3-319-34129-3_28">[18]</a></li>
+                    href="https://doi.org/10.1007/978-3-319-34129-3_28">[4]</a></li>
         </ul>
+        <p class="reference">
+            [1] Squirrel: a decentralized peer-to-peer web cache (Iyer) <br>
+            [2] Flower-CDN: a hybrid P2P overlay for efficient query processing in CDN (El Dick) <br>
+            [3] Behave: Behavioral Cache for Web Content (Frey) <br>
+            [4] CyCLaDEs: A Decentralized Cache for Triple Pattern Fragments (Folz)
+        </p>
     </section>
 
 
@@ -347,7 +392,7 @@
     <section class="slide" style="display: flex; flex-direction: column; justify-items: center; align-items: center;">
         <h2>Divide seed URLs between query engines</h2>
         <img src="images/divide_link_queue.svg" alt="divison of link queue" style="height: 35%;">
-        <div style="display: grid; grid-template-columns: repeat(2, 50%); font-size: 0.70em;">
+        <div style="display: grid; grid-template-columns: repeat(2, 50%); font-size: 0.70em; column-gap: 10%;">
             <div>
                 <b>Advantage</b>
                 <ul>
@@ -365,10 +410,10 @@
         </div>
     </section>
 
-    <section class="slide">
+    <section class="slide" style="display: flex; flex-direction: column; justify-items: center; align-items: center;">
         <h2>Adapt reachability criteria for each engine to the domain and query</h2>
-
-        <div style="display: grid; grid-template-columns: repeat(2, 50%); font-size: 0.70em;">
+        <img src="images/reachability_criteria_division.svg" alt="divison by reacability criteria" style="height: 35%;">
+        <div style="display: grid; grid-template-columns: repeat(2, 50%); font-size: 0.70em; column-gap: 10%;">
             <div>
                 <b>Advantage</b>
                 <ul>
@@ -380,14 +425,17 @@
                 <b>disadvantage</b>
                 <ul>
                     <li>The criteria has to be changed depending on the type of query</li>
-                    <li>Might not be suited for every query and dataset</li>
+                    <li>Might not be suited to every query and dataset; data source not reachable, query not dividable
+                        by criteria, ...</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <section class="slide">
+    <section class="slide" style="display: flex; flex-direction: column; justify-items: center; align-items: center;">
         <h2>Use a global link queue and solution map</h2>
+        <img src="images/division_labor.svg" alt="divison of type of labor" style="height: 45%;">
+
         <div style="display: grid; grid-template-columns: repeat(2, 50%); font-size: 0.70em;">
             <div>
                 <b>Advantage</b>
@@ -399,7 +447,7 @@
             <div>
                 <b>disadvantage</b>
                 <ul>
-                    <li>Necessitate more comunication between the engines</li>
+                    <li>Necessitate more communication between the engines</li>
                 </ul>
             </div>
         </div>
@@ -411,28 +459,70 @@
             <li>Result accuracy</li>
             <li>Query execution time</li>
             <li>The ratio of the execution time and the communication time between the engines</li>
-            <li>Ability to access isolated documents</li>
+            <li>Ability to access documents with a low number of edge</li>
             <li>Overlapping of the search space</li>
             <li>Query result arrival times</li>
         </ul>
     </section>
 
     <section class="slide">
-        <h2>Search domain division and <b>collaborative caching</b></h2>
-        <ul style="font-size: 0.75em;">
+        <h2>collaborative caching</h2>
+        <ul style="font-size: 1em;">
             <li>Caching of URLs contributing to the query</li>
             <li>intermediary joint results</li>
             <li>Three interpretations <ul>
                     <li>Directory of (partial) results</li>
                     <li>Checkpoint for longer execution</li>
-                    <li>Map of data source to explore</li>
+                    <li>Map of data sources to explore</li>
                 </ul>
             </li>
         </ul>
-        <ol style="font-size: 0.75em;">
-            <li>Unstructured network where peers are clustered based on their behavior</li>
-            <li>Distributed Hash Table to find the cached element</li>
-        </ol>
+    </section>
+
+    <section class="slide" style="display: flex; flex-direction: column; justify-items: center; align-items: center;">
+        <h2>Unstructured network where peers are clustered based on their behavior</h2>
+
+        <img src="images/unstructured_caching.svg" alt="unstructure cache" style="height: 35%;">
+
+        <div style="display: grid; grid-template-columns: repeat(2, 50%); font-size: 0.70em; column-gap: 10%;">
+            <div>
+                <b>Advantage</b>
+                <ul>
+                    <li>Faster lookup time</li>
+                </ul>
+            </div>
+
+            <div>
+                <b>disadvantage</b>
+                <ul>
+                    <li>Limited view of the network; depending on the organization of the network</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" style="display: flex; flex-direction: column; justify-items: center; align-items: center;">
+        <h2>Distributed Hash Table to find the cached element</h2>
+
+        <img src="images/dht_caching.svg" alt="dht cache" style="height: 35%;">
+
+        <div style="display: grid; grid-template-columns: repeat(2, 50%); font-size: 0.70em; column-gap: 10%;">
+            <div>
+                <b>Advantage</b>
+                <ul>
+                    <li>Ability to access the whole network</li>
+                </ul>
+                <p class="reference" style="margin-top: 5vh;"> [1]Cachet: a decentralized architecture for privacy preserving social networking with caching (Nilizadeh)</p>
+            </div>
+
+            <div>
+                <b>disadvantage</b>
+                <ul>
+                    <li>Can be slow (log(n); n is the number of cached elements)</li>
+                    <li>Not good for privacy, but there exist solutions <a target="_blank" href="https://doi.org/10.1145/2413176.2413215">[1]</a>; or we can share exclusively public data</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <section class="slide">
@@ -448,11 +538,12 @@
         <h2>Limitation and what else can be done</h2>
         <ul>
             <li>Mechanism for detecting similar queries; eg: Query containment <a target="_blank"
-                    href="https://doi.org/10.1007/978-3-031-01871-8">[27]</a></li>
+                    href="https://doi.org/10.1007/978-3-031-01871-8">[1]</a></li>
             <li>Fairness/"social contract" for sharing of computational power and cache</li>
             <li>Measurement to know if it lowers the cost of social applications (it's
-                hard to compare because it has plus value that is hard to quantify)</li>
+                hard to compare because it has plus values that is hard to quantify)</li>
         </ul>
+        <p class="reference">[1] Answering Queries Using Views, Second Edition (Afrati)</p>
     </section>
 
     <section class="slide">
@@ -461,11 +552,19 @@
             <li>Building a Collaborative Link Traversal Query Processing in the Context of Structured Decentralized
                 Environments </li>
             <li>
-                More complete queries by making more engines collaborate
+                More complete queries by making engines collaborate
             </li>
             <li>Faster queries by sharing cache information</li>
-            <li>Aim to make the creation of social applications more democratic</li>
+            <li>Aim to make the creation of social applications more user-controlled</li>
         </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Contact</h2>
+        <p>Bryan-Elliott Tam</p>
+        <a href="bryanelliott.tam@ugent.be">bryanelliott.tam@ugent.be</a>
+
+        <p><b>Poster stand</b>: #TBD</p>
     </section>
 
     <div class="progress"></div>
