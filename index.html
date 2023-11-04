@@ -31,9 +31,15 @@
         <h1 style="margin-bottom: 7vh;">Introducing Collaborative Link Traversal Query Processing (CLTQP) in the Context
             of Structured Decentralized
             Environments</h1>
+        <div style="display: flex; justify-content:space-between">
+            <div>
+                <p style="margin-bottom: 0.1vh;">Bryan-Elliott Tam (Early stage PhD student)</p>
+                <p>Universiteit Gent</p>
+            </div>
+            <img src="images/logo_UGent_NL_RGB_2400_kleur-op-wit.png" alt=universiteit Gent logo" style="height: 10vh;">
 
-        <p style="margin-bottom: 0.1vh;">Bryan-Elliott Tam (Early stage PhD student)</p>
-        <p>Universiteit Gent</p>
+        </div>
+
         </ul>
     </section>
 
@@ -41,8 +47,8 @@
         <h2>Motivation</h2>
         <ul style="font-size: 1em;">
             <li>Many decentralized web initiatives</li>
-            <li>Give (or re-give depending on perspective) control/sovereignty over data <a target="_blank"
-                    class="reference" href="https://biblio.ugent.be/publication/8760525">(Verstraete, 2022)</a>
+            <li>Give control/sovereignty over data <a target="_blank" class="reference"
+                    href="https://biblio.ugent.be/publication/8760525">(Verstraete, 2022)</a>
                 <ul>
                     <li>Where they store data</li>
                     <li>Who has access to it</li>
@@ -51,9 +57,9 @@
         </ul>
 
         <div style="display: flex; flex-direction: row; justify-content: space-around; margin-bottom: 20px;">
-            <img src="images/bluesky-logo.jpg" alt="bluesky logo" style="height: 10vh;">
-            <img src="images/mastodon-logo.svg" alt="mastodon logo" style="height: 10vh;">
-            <img src="images/solid-logo.svg" alt="Solid logo" style="height: 10vh;">
+            <img src="images/bluesky-logo.jpg" alt="bluesky logo" style="height: 7vh;">
+            <img src="images/mastodon-logo.svg" alt="mastodon logo" style="height: 7vh;">
+            <img src="images/solid-logo.svg" alt="Solid logo" style="height: 7vh;">
         </div>
     </section>
 
@@ -63,12 +69,11 @@
             <li>Divergence of interest or representation (Centralization of news even with social media, addictive
                 design, sur-representation of certain languages) <a target="_blank" class="reference"
                     href="http://dx.doi.org/10.1093/scipol/sct082">(Sevignani, 2013)</a></li>
-            <li>Utilization of users as unpaid sources of revenues <a target="_blank" class="reference"
-                    href="https://biblio.ugent.be/publication/8733276">(Mechant, 2021)</a> even when data is anonymized
+            <li>Utilization of users as unpaid sources of revenues even when data is anonymized
                 <a target="_blank" class="reference" href="about:blank">(Mechant, 2021)</a> <a target="_blank"
                     class="reference" href="http://dx.doi.org/10.1093/scipol/sct082">(Sevignani, 2013)</a>
             </li>
-            <li>Contribution to centralization of wealth <a target="_blank" class="reference"
+            <li>Contribution to the centralization of wealth <a target="_blank" class="reference"
                     href="https://doi.org/10.4324/9781315695624">(Curran, 2016)</a> <a target="_blank" class="reference"
                     href="http://dx.doi.org/10.1093/scipol/sct082">(Sevignani, 2013)</a> <a target="_blank"
                     class="reference" href="https://biblio.ugent.be/publication/8733276">(Curran, 2016)</a> </li>
@@ -78,17 +83,17 @@
     <section class="slide">
         <h2>A more user-controlled way to power applications?</h2>
         <ul>
+            <li>Make multiple engines provided by users execute discovery queries in web social network environments
+            </li>
             <li>A structural approach</li>
-            <li>Users provide themselves with the computational power</li>
-            <li>The more user the lower the cost</li>
+            <li>The more users the lower the cost</li>
             <li>More control over the design choices</li>
-            <li>Interoperability between applications</li>
         </ul>
     </section>
 
     <section class="slide">
         <h2>Agenda</h2>
-        <ol style="font-size: 0.75em;">
+        <ol>
             <li><b>Structured decentralized linked data environment and social applications</b></li>
             <li>Problem, research questions, and hypothesis</li>
             <li>Related work</li>
@@ -114,16 +119,16 @@
     </section>
 
     <section class="slide">
-        <h2>social applications</h2>
+        <h2>Social applications</h2>
         <div style="display: flex; height: 100%; width: 100%;">
             <img src="images/social_applications.svg" alt="social application schema" style="height: 70%;">
-            <ul style="margin-left: 5vw; font-size: 0.75em;">
+            <ul style="margin-left: 5vw; font-size: 0.85em;">
                 <li>Applications are driven by the interaction between users</li>
                 <li>Core functionalities
                     <ul>
                         <li>Requesting information (We don't focus on access control)</li>
                         <li>Discovering information (What we are doing)</li>
-                        <li>(Writing information, but we don't focus on that here)</li>
+                        <li>Writing and editing information (We don't focus on that)</li>
                     </ul>
                 </li>
             </ul>
@@ -135,11 +140,11 @@
         <h2 style="font-size: 1.95em;">Link Traversal Query Processing (LTQP)</h2>
         <div style="display: flex; height: 100%; width: 100%;">
             <img src="images/ltqp.svg" alt="social application schema" style="height: 70%;">
-            <ul style="margin-left: 5vw; font-size: 0.72em;">
+            <ul style="margin-left: 5vw; font-size: 0.92em;">
                 <li>Recursively looking up URIs to explore surrounding information, starting from a set of URIs called
-                    seed
-                    URIs <a target="_blank" class="reference"
-                        href="https://doi.org/10.1007/978-3-319-46523-4_19">(Hartig, 2016)</a></li>
+                    <q>seed URIs</q> <a target="_blank" class="reference"
+                        href="https://doi.org/10.1007/978-3-319-46523-4_19">(Hartig, 2016)</a>
+                </li>
                 <li>Predefined lookup policies with no input from the client <a target="_blank" class="reference"
                         href="https://doi.org/10.1007/978-3-319-46523-4_19">(Hartig, 2016)</a> <a target="_blank"
                         class="reference" href="https://doi.org/10.1145/2309996.2310005">(Hartig, 2012)</a></li>
@@ -154,7 +159,7 @@
 
     <section class="slide">
         <h2>Agenda</h2>
-        <ol style="font-size: 0.75em;">
+        <ol>
             <li>Structured decentralized linked data environment and social applications</li>
             <li><b>Problem, research questions, and hypothesis</b></li>
             <li>Related work</li>
@@ -167,8 +172,8 @@
         <h2 style="font-size: 1.5em;">Problem of completeness of LTQP in structured decentralized linked data
             environments</h2>
         <div style="display: flex; height: 100%; width: 100%;">
-            <img src="images/collaborative_engine.svg" alt="social application schema" style="height: 70%;">
-            <ul style="margin-left: 10vw; font-size: 0.70em;">
+            <img src="images/collaborative_engine.svg" alt="social application schema" style="height: 65%;">
+            <ul style="margin-left: 7vw; font-size: 0.80em;">
                 <li>With more engines, more exploration of the domain
                     <ul>
                         <li>Search of non-overlapping section</li>
@@ -188,10 +193,10 @@
 
 
     <section class="slide">
-        <h2 style="font-size: 1.5em;">Problem of slow execution times of LTQP in structured decentralized linked data
+        <h2 style="font-size: 1.56em;">Problem of slow execution times of LTQP in structured decentralized linked data
             environments</h2>
-        <p>We propose to use caching</p>
-        <ul style="font-size: 0.85em;">
+        <ul style="font-size: 0.98em;">
+            <li>We propose to use caching</li>
             <li>Multiple similar, complementary, or identical queries</li>
             <li>In LTQP caching: improves query completeness, can increase query execution time <a target="_blank"
                     class="reference"
@@ -201,14 +206,14 @@
                     <li>Has not been evaluated in structured environments</li>
                 </ul>
             </li>
-            <li>In the literature does not consider LTQP particularities: long execution time, multiple sources,
+            <li>The literature does not consider LTQP particularities: long execution time, multiple sources,
                 difficulties in attaining completeness</li>
         </ul>
     </section>
 
     <section class="slide">
         <h2>Research questions</h2>
-        <ol style="font-size: 0.92em;">
+        <ol>
             <li>Can we achieve better query result completeness and lower global query execution time?</li>
             <li>Does the CPU usage and the number of HTTP requests for each engine diminish?</li>
             <li>How can we prevent subdomain overlapping?</li>
@@ -218,7 +223,7 @@
 
     <section class="slide">
         <h2>Hypotheses</h2>
-        <ol style="font-size: 0.80em;">
+        <ol>
             <li>Increasing the number of engines diminishes query execution time and increase the number of data sources
                 explored.</li>
             <li>It is possible to create minimally overlapping subdomains without increasing query execution time.</li>
@@ -228,7 +233,7 @@
 
     <section class="slide">
         <h2>Agenda</h2>
-        <ol style="font-size: 0.75em;">
+        <ol>
             <li>Structured decentralized linked data environment and social applications</li>
             <li>Problem, research questions, and hypothesis</li>
             <li><b>Related work</b></li>
@@ -240,8 +245,8 @@
     <section class="slide">
         <h2>Collaborative SPARQL Querying</h2>
         <p>Using multiple agents to facilitate querying by diminishing the computation load of the
-            execution or the discovery of data sources. <a target="_blank" class="reference"
-                href="https://doi.org/10.1007/978-3-030-59003-1_21">(Grall, 2020)</a></p>
+            execution or the discovery of data sources <a target="_blank" class="reference"
+                href="https://doi.org/10.1007/978-3-030-59003-1_21">(Grall, 2020)</a>.</p>
         <ul>
             <li>Rotating data sources in a P2P network; Snob <a target="_blank" class="reference"
                     href="https://doi.org/10.3233/978-1-61499-894-5-55">(Grall, 2018)</a>
@@ -257,7 +262,7 @@
 
     <section class="slide">
         <h2>Collaborative SPARQL Querying</h2>
-        <ul style="font-size: 0.9em;">
+        <ul>
             <li>Division of the search space in communities: ColChain <a target="_blank" class="reference"
                     href="https://doi.org/10.1145/3442381.3450037">(Aebeloe, 2021)</a>
                 <ul>
@@ -274,7 +279,7 @@
 
     <section class="slide">
         <h2>P2P caching in the context of the web</h2>
-        <ul style="font-size: 0.9em;">
+        <ul>
             <li>Mapping URLs in a distributed hash table (DHT): Squirrel <a target="_blank" class="reference"
                     href="https://doi.org/10.1145/571825.571861">(Iyer, 2002 )</a></li>
             <li>Flower-CDN adds a mechanism to consider the locality of the node <a target="_blank" class="reference"
@@ -291,7 +296,7 @@
 
     <section class="slide">
         <h2>Agenda</h2>
-        <ol style="font-size: 0.75em;">
+        <ol>
             <li>Structured decentralized linked data environment and social applications</li>
             <li>Problem, research questions, and hypothesis</li>
             <li>Related work</li>
@@ -310,9 +315,14 @@
     </section>
 
     <section class="slide" style="display: flex; flex-direction: column; justify-items: center; align-items: center;">
-        <h2>Divide seed URLs between query engines</h2>
-        <img src="images/divide_link_queue.svg" alt="divison of link queue" style="height: 35%;">
-        <div style="display: grid; grid-template-columns: repeat(2, 50%); font-size: 0.70em; column-gap: 10%;">
+        <h2 style="font-size: 1.8em;">Divide seed URLs between query engines</h2>
+        <img src="images/divide_link_queue.svg" alt="divison of link queue" style="height: 70%;">
+    </section>
+
+    <section class="slide" style="display: flex; flex-direction: column; justify-items: center; align-items: center;">
+        <h2 style="font-size: 1.8em;">Divide seed URLs between query engines</h2>
+        <div
+            style="margin-top: 0.5vh; display: grid; grid-template-columns: repeat(2, 50%); font-size: 1em; column-gap: 10%;">
             <div>
                 <b>Advantage</b>
                 <ul>
@@ -321,9 +331,9 @@
             </div>
 
             <div>
-                <b>disadvantage</b>
+                <b>Disadvantages</b>
                 <ul>
-                    <li>Do not consider the overlaps</li>
+                    <li>Does not consider the overlaps</li>
                     <li>Potential loss of accuracy if the solutions are divided between multiple engines</li>
                 </ul>
             </div>
@@ -332,10 +342,14 @@
 
     <section class="slide" style="display: flex; flex-direction: column; justify-items: center; align-items: center;">
         <h2>Adapt reachability criteria for each engine to the domain and query</h2>
-        <img src="images/reachability_criteria_division.svg" alt="divison by reacability criteria" style="height: 35%;">
-        <div style="display: grid; grid-template-columns: repeat(2, 50%); font-size: 0.70em; column-gap: 10%;">
+        <img src="images/reachability_criteria_division.svg" alt="divison by reacability criteria" style="height: 60%;">
+    </section>
+
+    <section class="slide" style="display: flex; flex-direction: column; justify-items: center; align-items: center;">
+        <h2>Adapt reachability criteria for each engine to the domain and query</h2>
+        <div style="display: grid; grid-template-columns: repeat(2, 50%); font-size: 1em; column-gap: 10%;">
             <div>
-                <b>Advantages</b>
+                <b>Advantage</b>
                 <ul>
                     <li>Minimal communication between the engines</li>
                 </ul>
@@ -344,7 +358,7 @@
             <div>
                 <b>Disadvantages</b>
                 <ul>
-                    <li>The criterions have to be changed depending on the type of query</li>
+                    <li>The criteria have to be changed depending on the type of query</li>
                     <li>Might not be suited to every query and dataset; data source not reachable, query not dividable
                         by criteria, ...</li>
                 </ul>
@@ -354,18 +368,22 @@
 
     <section class="slide" style="display: flex; flex-direction: column; justify-items: center; align-items: center;">
         <h2>Use a global link queue and solution map</h2>
-        <img src="images/division_labor.svg" alt="divison of type of labor" style="height: 42%;">
+        <img src="images/division_labor.svg" alt="divison of type of labor" style="height: 60%;">
+    </section>
 
-        <div style="display: grid; grid-template-columns: repeat(2, 50%); font-size: 0.70em;">
+    <section class="slide" style="display: flex; flex-direction: column; justify-items: center; align-items: center;">
+        <h2>Use a global link queue and solution map</h2>
+
+        <div style="display: grid; grid-template-columns: repeat(2, 50%); font-size: 1em;">
             <div>
-                <b>Advantages</b>
+                <b>Advantage</b>
                 <ul>
-                    <li>More reliable with no special consideration or manipulation to get all the results</li>
+                    <li>No special consideration or manipulation to get all the results</li>
                 </ul>
             </div>
 
             <div>
-                <b>Disadvantages</b>
+                <b>Disadvantage</b>
                 <ul>
                     <li>Necessitate more communication between the engines</li>
                 </ul>
@@ -375,7 +393,7 @@
 
     <section class="slide">
         <h3>Metrics evaluated</h3>
-        <ul style="font-size: 0.80em;">
+        <ul style="font-size: 1em;">
             <li>Result accuracy</li>
             <li>Query execution time</li>
             <li>The ratio of the execution time and the communication time between the engines</li>
@@ -389,7 +407,7 @@
         <h2>collaborative caching</h2>
         <ul style="font-size: 1em;">
             <li>Caching of URLs contributing to the query</li>
-            <li>intermediary joint results</li>
+            <li>intermediary join results</li>
             <li>Three interpretations <ul>
                     <li>Directory of (partial) results</li>
                     <li>Checkpoint for longer execution</li>
@@ -402,18 +420,22 @@
     <section class="slide" style="display: flex; flex-direction: column; justify-items: center; align-items: center;">
         <h2>Unstructured network where peers are clustered based on their behavior</h2>
 
-        <img src="images/unstructured_caching.svg" alt="unstructure cache" style="height: 35%;">
+        <img src="images/unstructured_caching.svg" alt="unstructure cache" style="height: 60%;">
+    </section>
 
-        <div style="display: grid; grid-template-columns: repeat(2, 50%); font-size: 0.70em; column-gap: 10%;">
+    <section class="slide" style="display: flex; flex-direction: column; justify-items: center; align-items: center;">
+        <h2>Unstructured network where peers are clustered based on their behavior</h2>
+
+        <div style="display: grid; grid-template-columns: repeat(2, 50%); font-size: 1em; column-gap: 10%;">
             <div>
-                <b>Advantages</b>
+                <b>Advantage</b>
                 <ul>
                     <li>Faster lookup time</li>
                 </ul>
             </div>
 
             <div>
-                <b>Disadvantages</b>
+                <b>Disadvantage</b>
                 <ul>
                     <li>Limited view of the network; depending on the organization of the network</li>
                 </ul>
@@ -424,11 +446,15 @@
     <section class="slide" style="display: flex; flex-direction: column; justify-items: center; align-items: center;">
         <h2>Distributed Hash Table to find the cached element</h2>
 
-        <img src="images/dht_caching.svg" alt="dht cache" style="height: 35%;">
+        <img src="images/dht_caching.svg" alt="dht cache" style="height: 60%;">
+    </section>
 
-        <div style="display: grid; grid-template-columns: repeat(2, 50%); font-size: 0.70em; column-gap: 10%;">
+    <section class="slide" style="display: flex; flex-direction: column; justify-items: center; align-items: center;">
+        <h2>Distributed Hash Table to find the cached element</h2>
+
+        <div style="display: grid; grid-template-columns: repeat(2, 50%); font-size: 1em; column-gap: 10%;">
             <div>
-                <b>Advantages</b>
+                <b>Advantage</b>
                 <ul>
                     <li>Ability to access the whole network</li>
                 </ul>
@@ -439,8 +465,7 @@
                 <ul>
                     <li>Can be slow (log(n); n is the number of cached elements)</li>
                     <li>Not good for privacy, but there exist solutions <a target="_blank" class="reference"
-                            href="https://doi.org/10.1145/2413176.2413215">(Nilizadeh, 2012)</a>; or we can share exclusively public
-                        data</li>
+                            href="https://doi.org/10.1145/2413176.2413215">(Nilizadeh, 2012)</a> or it is possible to only share public data</li>
                 </ul>
             </div>
         </div>
@@ -457,7 +482,7 @@
 
     <section class="slide">
         <h2>Agenda</h2>
-        <ol style="font-size: 0.75em;">
+        <ol>
             <li>Structured decentralized linked data environment and social applications</li>
             <li>Problem, research questions, and hypothesis</li>
             <li>Related work</li>
@@ -469,7 +494,8 @@
     <section class="slide">
         <h2>Limitation and what else can be done</h2>
         <ul>
-            <li>Mechanism for detecting similar queries; eg: Query containment <a target="_blank" class="reference"
+            <li>Mechanism for detecting similar queries and compatibility of the data publication with the collaborative
+                mechanism; eg: Query containment <a target="_blank" class="reference"
                     href="https://doi.org/10.1007/978-3-031-01871-8">(Afrati, 2019)</a></li>
             <li>Fairness/"social contract" for sharing of computational power and cache</li>
             <li>Measurement to know if it lowers the cost of social applications (it's
