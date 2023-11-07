@@ -46,8 +46,8 @@
     <section class="slide">
         <h2>Motivation</h2>
         <ul style="font-size: 1em;">
-            <li>Many decentralized web initiatives</li>
-            <li>Give control/sovereignty over data <a target="_blank" class="reference"
+            <li>Multiple decentralized web initiatives</li>
+            <li>Give control/sovereignty to the users over their data <a target="_blank" class="reference"
                     href="https://biblio.ugent.be/publication/8760525">(Verstraete, 2022)</a>
                 <ul>
                     <li>Where they store data</li>
@@ -83,22 +83,21 @@
     <section class="slide">
         <h2>A more user-controlled way to power applications?</h2>
         <ul>
-            <li>Make multiple engines provided by users execute discovery queries in web social network environments
-            </li>
-            <li>A structural approach</li>
-            <li>The more users the lower the cost</li>
-            <li>More control over the design choices</li>
+            <li>Give to the users control over how applications are run</li>
+            <li>Insourcing the computation of discovery query by making query engines to collaborate</li>
+            <li>Structurally more possibility for collective control over social applications</li>
+            <li>Discovery query and collaboration of engines come with scientific problems</li>
         </ul>
     </section>
 
     <section class="slide">
         <h2>Agenda</h2>
         <ol>
-            <li><b>Structured decentralized linked data environment and social applications</b></li>
+            <li><b>Structured decentralized linked data environment</b></li>
             <li>Problem, research questions, and hypothesis</li>
             <li>Related work</li>
             <li>Planned Solution</li>
-            <li>Limitation, what else can be questions, and hypothesis</li>
+            <li>Limitation and conclusion</li>
         </ol>
     </section>
 
@@ -107,8 +106,8 @@
         <div style="display: flex; height: 100%; width: 100%;">
             <img src="images/structured_environment.svg" alt="Structured linked data environment" style="height: 70%;">
             <div style="margin-left: 10vw; font-size: 0.90em;">
-                Examples of specification providing structure <a target="_blank" href="https://arxiv.org/abs/2302.06933"
-                    class="reference"> (Taelman, 2023)</a>
+                Environments where specifications guaranty completeness<a target="_blank"
+                    href="https://arxiv.org/abs/2302.06933" class="reference"> (Taelman, 2023)</a>
                 <ul>
                     <li><a target="_blank" href="https://www.w3.org/TR/ldp/">Linked Data Platform (LDP)</a></li>
                     <li><a target="_blank" href="https://solid.github.io/type-indexes/">Type Indexes</a></li>
@@ -117,7 +116,7 @@
             </div>
         </div>
     </section>
-
+    <!--
     <section class="slide">
         <h2>Social applications</h2>
         <div style="display: flex; height: 100%; width: 100%;">
@@ -134,7 +133,7 @@
             </ul>
         </div>
     </section>
-
+-->
 
     <section class="slide">
         <h2 style="font-size: 1.95em;">Link Traversal Query Processing (LTQP)</h2>
@@ -160,11 +159,11 @@
     <section class="slide">
         <h2>Agenda</h2>
         <ol>
-            <li>Structured decentralized linked data environment and social applications</li>
+            <li>Structured decentralized linked data environment</li>
             <li><b>Problem, research questions, and hypothesis</b></li>
             <li>Related work</li>
             <li>Planned Solution</li>
-            <li>Limitation, what else can be questions, and hypothesis</li>
+            <li>Limitation and conclusion</li>
         </ol>
     </section>
 
@@ -174,12 +173,7 @@
         <div style="display: flex; height: 100%; width: 100%;">
             <img src="images/collaborative_engine.svg" alt="social application schema" style="height: 65%;">
             <ul style="margin-left: 7vw; font-size: 0.80em;">
-                <li>With more engines, more exploration of the domain
-                    <ul>
-                        <li>Search of non-overlapping section</li>
-                        <li>Sharing of results</li>
-                    </ul>
-                </li>
+                <li>Search of non-overlapping section</li>
                 <li>Structural biases of results
                     <ul>
                         <li>Sensibility of initial condition</li>
@@ -234,42 +228,23 @@
     <section class="slide">
         <h2>Agenda</h2>
         <ol>
-            <li>Structured decentralized linked data environment and social applications</li>
+            <li>Structured decentralized linked data environment</li>
             <li>Problem, research questions, and hypothesis</li>
             <li><b>Related work</b></li>
             <li>Planned Solution</li>
-            <li>Limitation, what else can be questions, and hypothesis</li>
+            <li>Limitation and conclusion</li>
         </ol>
     </section>
 
     <section class="slide">
         <h2>Collaborative SPARQL Querying</h2>
-        <p>Using multiple agents to facilitate querying by diminishing the computation load of the
-            execution or the discovery of data sources <a target="_blank" class="reference"
-                href="https://doi.org/10.1007/978-3-030-59003-1_21">(Grall, 2020)</a>.</p>
         <ul>
             <li>Rotating data sources in a P2P network; Snob <a target="_blank" class="reference"
                     href="https://doi.org/10.3233/978-1-61499-894-5-55">(Grall, 2018)</a>
-                <ul>
-                    <li>Partial view of the network; random and profile-based</li>
-                    <li>Results shared after the rotation</li>
-                    <li>Possible to enhance completeness without visiting each data source</li>
-                </ul>
             </li>
-        </ul>
-    </section>
 
-
-    <section class="slide">
-        <h2>Collaborative SPARQL Querying</h2>
-        <ul>
             <li>Division of the search space in communities: ColChain <a target="_blank" class="reference"
                     href="https://doi.org/10.1145/3442381.3450037">(Aebeloe, 2021)</a>
-                <ul>
-                    <li>Creation of deliberate communities</li>
-                    <li>Querying own data source than the ones from known communities.</li>
-                    <li>Collaboration in the division of the search space based on socially close information</li>
-                </ul>
             </li>
             <li>Leveraging the social links between data sources <a target="_blank" class="reference"
                     href="https://doi.org/10.1109/ICDCS.2014.38">(Shen, 2014)</a> <a target="_blank" class="reference"
@@ -297,21 +272,21 @@
     <section class="slide">
         <h2>Agenda</h2>
         <ol>
-            <li>Structured decentralized linked data environment and social applications</li>
+            <li>Structured decentralized linked data environment</li>
             <li>Problem, research questions, and hypothesis</li>
             <li>Related work</li>
             <li><b>Planned Solution</b></li>
-            <li>Limitation, what else can be questions, and hypothesis</li>
+            <li>Limitation and conclusion</li>
         </ol>
     </section>
 
     <section class="slide">
         <h2>Search domain division</h2>
-        <ol>
-            <li>Divide seed URLs between query engines</li>
-            <li>Adapt reachability criteria for each engine to the domain and query</li>
-            <li>Use a global link queue and solution map</li>
-        </ol>
+        <ul>
+            <li>Divide the domain in a minimally overlapping manner</li>
+            <li>Minimize communications between the engines</li>
+            <li>Exploit structural assumption</li>
+        </ul>
     </section>
 
     <section class="slide" style="display: flex; flex-direction: column; justify-items: center; align-items: center;">
@@ -465,7 +440,8 @@
                 <ul>
                     <li>Can be slow (log(n); n is the number of cached elements)</li>
                     <li>Not good for privacy, but there exist solutions <a target="_blank" class="reference"
-                            href="https://doi.org/10.1145/2413176.2413215">(Nilizadeh, 2012)</a> or it is possible to only share public data</li>
+                            href="https://doi.org/10.1145/2413176.2413215">(Nilizadeh, 2012)</a> or it is possible to
+                        only share public data</li>
                 </ul>
             </div>
         </div>
@@ -483,36 +459,43 @@
     <section class="slide">
         <h2>Agenda</h2>
         <ol>
-            <li>Structured decentralized linked data environment and social applications</li>
+            <li>Structured decentralized linked data environment</li>
             <li>Problem, research questions, and hypothesis</li>
             <li>Related work</li>
             <li>Planned Solution</li>
-            <li><b>Limitation, what else can be questions, and hypothesis</b></li>
+            <li><b>Limitation and conclusion</b></li>
         </ol>
     </section>
 
     <section class="slide">
-        <h2>Limitation and what else can be done</h2>
-        <ul>
+        <h2>Limitation</h2>
+        <ul style="font-size: 0.80em;">
             <li>Mechanism for detecting similar queries and compatibility of the data publication with the collaborative
-                mechanism; eg: Query containment <a target="_blank" class="reference"
-                    href="https://doi.org/10.1007/978-3-031-01871-8">(Afrati, 2019)</a></li>
-            <li>Fairness/"social contract" for sharing of computational power and cache</li>
-            <li>Measurement to know if it lowers the cost of social applications (it's
-                hard to compare because it has plus values that are hard to quantify)</li>
+                mechanism<ul>
+                    <li>Query containment <a target="_blank" class="reference"
+                            href="https://doi.org/10.1007/978-3-031-01871-8">(Afrati, 2019)</a>, Query-Shapes
+                        containments</li>
+                    <li>Detection of specification to exploit possible optimization</li>
+                </ul>
+            <li>Adaptative collaborative design</li>
+            <li>Can we really suppose that in decentralized linked data environment meaningful coordination between data
+                sources will be possible?
+                <ul>
+                    <li>Introduction of new biases?</li>
+                </ul>
+            </li>
+            <li>Memory management during long execution (many useless triple in store)</li>
         </ul>
     </section>
 
     <section class="slide">
         <h2>Conclusion</h2>
-        <ul>
+        <ul style="font-size: 0.9em;">
             <li>Building a Collaborative Link Traversal Query Processing in the Context of Structured Decentralized
                 Environments </li>
-            <li>
-                More complete queries by making engines collaborate
-            </li>
-            <li>Faster queries by sharing cache information</li>
-            <li>Aim to make the creation of social applications more user-controlled</li>
+
+            <li>Using a global link queue and solution map might be the easiest solution to work on without prior
+                research with an unstructured cache mapping contributing data sources.</li>
         </ul>
     </section>
 
