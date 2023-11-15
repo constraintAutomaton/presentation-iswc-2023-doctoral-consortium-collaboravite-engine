@@ -11,5 +11,8 @@
   "dependencies": {
     "@shower/core": "^3.3.0",
     "@shower/material": "^2.5.1"
+  },
+  "devDependencies": {
+    "shower-cli": "^0.2.1"
   }
 }
